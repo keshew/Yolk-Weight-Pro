@@ -1,10 +1,3 @@
-//
-//  Yolk_Weight_ProTests.swift
-//  Yolk Weight ProTests
-//
-//  Created by Артём Коротков on 09.12.2025.
-//
-
 import XCTest
 @testable import Yolk_Weight_Pro
 

@@ -1,10 +1,3 @@
-//
-//  Yolk_Weight_ProUITestsLaunchTests.swift
-//  Yolk Weight ProUITests
-//
-//  Created by Артём Коротков on 09.12.2025.
-//
-
 import XCTest
 
 final class Yolk_Weight_ProUITestsLaunchTests: XCTestCase {
