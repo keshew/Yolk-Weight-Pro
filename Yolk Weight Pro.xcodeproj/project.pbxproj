@@ -6,7 +6,22 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		862161692EF82E6300FBB524 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 862161682EF82E6300FBB524 /* FirebaseCore */; };
+		8621616B2EF82E6300FBB524 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8621616A2EF82E6300FBB524 /* FirebaseMessaging */; };
+		8645FE432EF993EE00B3D07F /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = 8645FE422EF993EE00B3D07F /* AppsFlyerLib */; };
+		8645FE802EF9968A00B3D07F /* NotificationService.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8645FE792EF9968900B3D07F /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8645FE922EF99B2100B3D07F /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8645FE912EF99B2100B3D07F /* FirebaseMessaging */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
+		8645FE7E2EF9968A00B3D07F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86ED29982EE8920D00C48F64 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8645FE782EF9968900B3D07F;
+			remoteInfo = NotificationService;
+		};
 		86ED29B12EE8920F00C48F64 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 86ED29982EE8920D00C48F64 /* Project object */;
@@ -23,13 +38,46 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8645FE852EF9968A00B3D07F /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8645FE802EF9968A00B3D07F /* NotificationService.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		8645FE792EF9968900B3D07F /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		86ED29A02EE8920D00C48F64 /* Yolk Weight Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yolk Weight Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86ED29B02EE8920F00C48F64 /* Yolk Weight ProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yolk Weight ProTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86ED29BA2EE8920F00C48F64 /* Yolk Weight ProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yolk Weight ProUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8645FE842EF9968A00B3D07F /* Exceptions for "NotificationService" folder in "NotificationService" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8645FE782EF9968900B3D07F /* NotificationService */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		8645FE7A2EF9968900B3D07F /* NotificationService */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8645FE842EF9968A00B3D07F /* Exceptions for "NotificationService" folder in "NotificationService" target */,
+			);
+			path = NotificationService;
+			sourceTree = "<group>";
+		};
 		86ED29A22EE8920D00C48F64 /* Yolk Weight Pro */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Yolk Weight Pro";
@@ -48,10 +96,21 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8645FE762EF9968900B3D07F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8645FE922EF99B2100B3D07F /* FirebaseMessaging in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		86ED299D2EE8920D00C48F64 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8621616B2EF82E6300FBB524 /* FirebaseMessaging in Frameworks */,
+				862161692EF82E6300FBB524 /* FirebaseCore in Frameworks */,
+				8645FE432EF993EE00B3D07F /* AppsFlyerLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +131,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8645FE902EF99B2100B3D07F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		86ED29972EE8920D00C48F64 = {
 			isa = PBXGroup;
 			children = (
 				86ED29A22EE8920D00C48F64 /* Yolk Weight Pro */,
 				86ED29B32EE8920F00C48F64 /* Yolk Weight ProTests */,
 				86ED29BD2EE8920F00C48F64 /* Yolk Weight ProUITests */,
+				8645FE7A2EF9968900B3D07F /* NotificationService */,
+				8645FE902EF99B2100B3D07F /* Frameworks */,
 				86ED29A12EE8920D00C48F64 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +156,7 @@
 				86ED29A02EE8920D00C48F64 /* Yolk Weight Pro.app */,
 				86ED29B02EE8920F00C48F64 /* Yolk Weight ProTests.xctest */,
 				86ED29BA2EE8920F00C48F64 /* Yolk Weight ProUITests.xctest */,
+				8645FE792EF9968900B3D07F /* NotificationService.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +164,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8645FE782EF9968900B3D07F /* NotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8645FE812EF9968A00B3D07F /* Build configuration list for PBXNativeTarget "NotificationService" */;
+			buildPhases = (
+				8645FE752EF9968900B3D07F /* Sources */,
+				8645FE762EF9968900B3D07F /* Frameworks */,
+				8645FE772EF9968900B3D07F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8645FE7A2EF9968900B3D07F /* NotificationService */,
+			);
+			name = NotificationService;
+			packageProductDependencies = (
+				8645FE912EF99B2100B3D07F /* FirebaseMessaging */,
+			);
+			productName = NotificationService;
+			productReference = 8645FE792EF9968900B3D07F /* NotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		86ED299F2EE8920D00C48F64 /* Yolk Weight Pro */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86ED29C42EE8920F00C48F64 /* Build configuration list for PBXNativeTarget "Yolk Weight Pro" */;
@@ -102,16 +194,21 @@
 				86ED299C2EE8920D00C48F64 /* Sources */,
 				86ED299D2EE8920D00C48F64 /* Frameworks */,
 				86ED299E2EE8920D00C48F64 /* Resources */,
+				8645FE852EF9968A00B3D07F /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8645FE7F2EF9968A00B3D07F /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				86ED29A22EE8920D00C48F64 /* Yolk Weight Pro */,
 			);
 			name = "Yolk Weight Pro";
 			packageProductDependencies = (
+				862161682EF82E6300FBB524 /* FirebaseCore */,
+				8621616A2EF82E6300FBB524 /* FirebaseMessaging */,
+				8645FE422EF993EE00B3D07F /* AppsFlyerLib */,
 			);
 			productName = "Yolk Weight Pro";
 			productReference = 86ED29A02EE8920D00C48F64 /* Yolk Weight Pro.app */;
@@ -173,6 +270,9 @@
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
+					8645FE782EF9968900B3D07F = {
+						CreatedOnToolsVersion = 16.2;
+					};
 					86ED299F2EE8920D00C48F64 = {
 						CreatedOnToolsVersion = 16.2;
 					};
@@ -195,6 +295,10 @@
 			);
 			mainGroup = 86ED29972EE8920D00C48F64;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				862161672EF82E6300FBB524 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8645FE412EF993EE00B3D07F /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 86ED29A12EE8920D00C48F64 /* Products */;
 			projectDirPath = "";
@@ -203,11 +307,19 @@
 				86ED299F2EE8920D00C48F64 /* Yolk Weight Pro */,
 				86ED29AF2EE8920F00C48F64 /* Yolk Weight ProTests */,
 				86ED29B92EE8920F00C48F64 /* Yolk Weight ProUITests */,
+				8645FE782EF9968900B3D07F /* NotificationService */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8645FE772EF9968900B3D07F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		86ED299E2EE8920D00C48F64 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +344,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8645FE752EF9968900B3D07F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		86ED299C2EE8920D00C48F64 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +375,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8645FE7F2EF9968A00B3D07F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8645FE782EF9968900B3D07F /* NotificationService */;
+			targetProxy = 8645FE7E2EF9968A00B3D07F /* PBXContainerItemProxy */;
+		};
 		86ED29B22EE8920F00C48F64 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 86ED299F2EE8920D00C48F64 /* Yolk Weight Pro */;
@@ -269,6 +393,66 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		8645FE822EF9968A00B3D07F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NotificationService/NotificationService.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = D4Y52TJ68T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.yolkweightproyolk.NotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = yolknotifservice;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8645FE832EF9968A00B3D07F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NotificationService/NotificationService.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = D4Y52TJ68T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.yolkweightproyolk.NotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = yolknotifservice;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		86ED29C22EE8920F00C48F64 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -393,11 +577,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Yolk Weight Pro/Yolk Weight Pro.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Yolk Weight Pro/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Yolk-Weight-Pro-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to the camera to take photos and record videos.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "We collect usage data to enhance app performance, improve features, and provide a better user experience. Your information remains secure and is not shared with third parties for advertising purposes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -408,7 +596,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.yolkweightproyolk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -426,11 +614,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Yolk Weight Pro/Yolk Weight Pro.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Yolk Weight Pro/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Yolk-Weight-Pro-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to the camera to take photos and record videos.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "We collect usage data to enhance app performance, improve features, and provide a better user experience. Your information remains secure and is not shared with third parties for advertising purposes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -441,7 +633,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.yolkweightproyolk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -525,6 +717,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8645FE812EF9968A00B3D07F /* Build configuration list for PBXNativeTarget "NotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8645FE822EF9968A00B3D07F /* Debug */,
+				8645FE832EF9968A00B3D07F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		86ED299B2EE8920D00C48F64 /* Build configuration list for PBXProject "Yolk Weight Pro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -562,6 +763,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		862161672EF82E6300FBB524 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.7.0;
+			};
+		};
+		8645FE412EF993EE00B3D07F /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.17.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		862161682EF82E6300FBB524 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 862161672EF82E6300FBB524 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		8621616A2EF82E6300FBB524 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 862161672EF82E6300FBB524 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		8645FE422EF993EE00B3D07F /* AppsFlyerLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8645FE412EF993EE00B3D07F /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
+			productName = AppsFlyerLib;
+		};
+		8645FE912EF99B2100B3D07F /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 862161672EF82E6300FBB524 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 86ED29982EE8920D00C48F64 /* Project object */;
 }

@@ -1,7 +1,7 @@
 import SwiftUI
 import Combine
 
-struct Egg: Identifiable, Codable, Equatable {
+struct Eggies: Identifiable, Codable, Equatable {
     let id: UUID
     var weight: Int
     var batch: String?
@@ -23,7 +23,7 @@ struct Egg: Identifiable, Codable, Equatable {
 }
 
 class EggStorage: ObservableObject {
-    @Published var eggs: [Egg] = []
+    @Published var eggs: [Eggies] = []
     
     private let eggsKey = "EggWeightPro_Eggs"
     
@@ -36,7 +36,7 @@ class EggStorage: ObservableObject {
             eggs = []
             return
         }
-        if let savedEggs = try? JSONDecoder().decode([Egg].self, from: data) {
+        if let savedEggs = try? JSONDecoder().decode([Eggies].self, from: data) {
             eggs = savedEggs.sorted(by: { $0.date > $1.date })
         }
     }
@@ -48,7 +48,7 @@ class EggStorage: ObservableObject {
     }
     
     func addEgg(weight: Int, batch: String?, note: String?, date: Date = Date()) {
-        let newEgg = Egg(id: UUID(), weight: weight, batch: batch, note: note, date: date)
+        let newEgg = Eggies(id: UUID(), weight: weight, batch: batch, note: note, date: date)
         eggs.insert(newEgg, at: 0)
         save()
     }
@@ -216,7 +216,7 @@ struct EggsView: View {
 }
 
 struct EggRowView: View {
-    let egg: Egg
+    let egg: Eggies
     
     var body: some View {
         HStack {
@@ -417,7 +417,7 @@ class DashboardViewModel: ObservableObject {
             .store(in: &cancellables)
     }
     
-    private func calculate(eggs: [Egg], broilers: [Broiler]) {
+    private func calculate(eggs: [Eggies], broilers: [Broiler]) {
         let today = Calendar.current.startOfDay(for: Date())
         
         eggsCountToday = eggs.filter { Calendar.current.isDate($0.date, inSameDayAs: Date()) }.count
@@ -806,8 +806,8 @@ struct StatisticsView: View {
     }
 }
 
-extension Egg.Classification: Hashable, CaseIterable {
-    public static var allCases: [Egg.Classification] = [.S, .M, .L, .XL]
+extension Eggies.Classification: Hashable, CaseIterable {
+    public static var allCases: [Eggies.Classification] = [.S, .M, .L, .XL]
     
     public func hash(into hasher: inout Hasher) {
         hasher.combine(rawValue)
@@ -852,13 +852,13 @@ struct EggStatisticsView: View {
     
     private var classificationChartData: [ClassificationItem]? {
         let counts = Dictionary(grouping: storage.eggs, by: { $0.classification })
-        return Egg.Classification.allCases.compactMap { classification in
+        return Eggies.Classification.allCases.compactMap { classification in
             let count = counts[classification]?.count ?? 0
             return ClassificationItem(classification: classification, count: count)
         }
     }
     
-    private func classificationColor(for classification: Egg.Classification) -> Color {
+    private func classificationColor(for classification: Eggies.Classification) -> Color {
         switch classification {
         case .S: return Color.yolkYellow.opacity(0.6)
         case .M: return Color.yolkYellow.opacity(0.8)
@@ -883,7 +883,7 @@ struct EggStatisticsView: View {
 }
 
 struct EggWeightTrendChart: View {
-    let eggs: [Egg]
+    let eggs: [Eggies]
     
     var body: some View {
         if let chartData = trendChartData {
@@ -976,7 +976,7 @@ struct BroilerStatisticsView: View {
 }
 
 struct SummaryStatisticsView: View {
-    let eggs: [Egg]
+    let eggs: [Eggies]
     let broilers: [Broiler]
     
     var body: some View {
@@ -1017,7 +1017,7 @@ struct SummaryStatisticsView: View {
 
 struct ClassificationItem: Identifiable {
     let id = UUID()
-    let classification: Egg.Classification
+    let classification: Eggies.Classification
     let count: Int
 }
 
