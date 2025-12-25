@@ -94,7 +94,7 @@ struct LoadingView: View {
         VStack {
             if isPortrait {
                 ZStack {
-                    Image("loading")
+                    Image("loadPor")
                         .resizable()
                         .ignoresSafeArea()
                     
@@ -116,7 +116,7 @@ struct LoadingView: View {
                 }
             } else {
                 ZStack {
-                    Image("loadingLand")
+                    Image("loadHor")
                         .resizable()
                         .ignoresSafeArea()
                     

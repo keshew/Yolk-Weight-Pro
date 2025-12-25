@@ -17,13 +17,13 @@ struct NoInternet: View {
         VStack {
             if isPortrait {
                 ZStack {
-                    Image("inetLand")
+                    Image("inPor")
                         .resizable()
                         .ignoresSafeArea()
                 }
             } else {
                 ZStack {
-                    Image("inet")
+                    Image("inHor")
                         .resizable()
                         .ignoresSafeArea()
                     

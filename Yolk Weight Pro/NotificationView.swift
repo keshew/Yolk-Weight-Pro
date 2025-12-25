@@ -20,9 +20,14 @@ struct NotificationView: View {
         VStack {
             if isPortrait {
                 ZStack {
-                    Image("notif")
-                        .resizable()
+                    Color.clear
+                        .overlay {
+                            Image("notifPor")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                        }
                         .ignoresSafeArea()
+                    
                     
                     VStack(spacing: 30) {
                         Spacer()
@@ -69,7 +74,7 @@ struct NotificationView: View {
                 }
             } else {
                 ZStack {
-                    Image("notifLand")
+                    Image("notifHol")
                         .resizable()
                         .ignoresSafeArea()
                     
